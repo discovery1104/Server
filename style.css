@@ -1,0 +1,99 @@
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+body {
+    font-family: 'Noto Sans', sans-serif;
+    line-height: 2.0;
+    color: #d5d5d5;
+    background: url(back.png);
+    margin: 0;
+    padding: 0;
+    text-align: center; /* 全テキストを中央揃えに */
+}
+
+header {
+    background: rgba(52, 52, 52, 0.8); /* 半透明の背景 */
+    color: #f6f6f6;
+    padding: 1.6rem 0;
+    text-align: center;
+    border-bottom: 10px solid transparent; /* 透明な縁取り */
+    backdrop-filter: blur(8px); /* 背景のぼかし */
+}
+
+section {
+    background: rgba(0, 0, 0, 0.379);
+    padding: 3rem 5.6rem; /* 縦方向のパディングを増加 */
+    margin: 1.6rem auto;
+    border-radius: 22px;
+    box-shadow: 0 9px 18px rgba(0, 0, 0, 0.16);
+    transition: all 0.3s ease;
+    max-width: 80%;
+    backdrop-filter: blur(8px);
+    margin: 150px auto;
+    opacity: 0; /* 初期状態を非表示に設定 */
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+section.visible {
+    opacity: 1; /* 表示時 */
+    transform: translateY(0);
+}
+
+section:hover {
+    box-shadow: 0 11px 22px rgba(0, 0, 0, 0.21);
+}
+
+h1, h2 {
+    color: #d0d0d0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left; /* リスト項目は左揃え */
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background: rgba(52, 52, 52, 0.8); /* 半透明の背景 */
+    color: #f6f6f6;
+    text-align: center;
+    padding: 1.6rem 0;
+    border-top: 10px solid transparent; /* 透明な縁取り */
+    backdrop-filter: blur(8px); /* 背景のぼかし */
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 22px;
+    margin: 0 auto; /* 画像とビデオを中央揃え */
+}
+header, section, footer {
+    animation: fadeInUp 0.8s ease-out both;
+    animation-delay: 0.3s;
+}
+.social-share a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    background-color: #00b900; /* LINEの色 */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.social-share a:hover {
+    background-color: #008c00;
+}
