@@ -97,3 +97,40 @@ header, section, footer {
 .social-share a:hover {
     background-color: #008c00;
 }
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%; /* 幅を100%に設定 */
+    height: 100%; /* 高さを100%に設定 */
+}
+
+.fullscreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw; /* ビューポートの幅に合わせる */
+    height: 100vh; /* ビューポートの高さに合わせる */
+    text-align: center;
+    background: url('back-bokasi.png') no-repeat center center; /* 背景画像 */
+    background-size: cover;
+    opacity: 1; /* 表示時 */
+    transform: translateY(0);
+}
+
+.fullscreen h1 {
+    font-size: 3rem; /* タイトルのサイズ */
+    color: #fff; /* タイトルの色 */
+    margin: 0; /* 余白を無くす */
+}
+
+.fullscreen .subtitle {
+    font-size: 1.5rem; /* サブタイトルのサイズ */
+    color: #fff; /* サブタイトルの色 */
+    margin: 0; /* 余白を無くす */
+}
+html, body {
+    overflow-x: hidden;
+}
+
+
